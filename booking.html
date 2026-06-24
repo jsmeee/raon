@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking & Payment - LokalGuide</title>
+    <link rel="stylesheet" href="css betul punya.css">
+<style>
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--text-dark);
+        font-size: 0.95rem;
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        outline: none;
+        font-size: 1rem;
+        background-color: white;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+        border-color: orange;
+    }
+        .booking-wrapper {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .booking-form-section {
+            flex: 2;
+            min-width: 320px;
+        }
+
+        .booking-summary-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .form-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .form-card h2, .summary-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .summary-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .summary-line{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px dashed #dddddd;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .btn-pay {
+            width: 100%;
+            padding: 12px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-pay:hover {
+            background-color: var(--primary-blue);
+        }
+
+</style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index1.html" class="logo">Lokal<span>Guide</span></a>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="guide.html" class="active">Find a Guide</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="dashboard.html">User Dashboard</a></li>
+                <li><a href="login.html" class="btn-login">Log In</a></li>
+                <li><a href="signup.html" class="btn-signup">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="booking-wrapper">
+        
+        <section class="booking-form-section">
+            <div class="form-card">
+                <h2>1. Trip Details</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="trip-date">Select Date</label>
+                        <input type="date" id="trip-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests">
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3 People</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-card">
+                <h2>2. Payment Information</h2>
+                <div class="form-group">
+                    <label>Cardholder Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                    <label>Expiry Date </label>
+                    <input type="text" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                        <label>CVV</label>
+                        <input type="password" placeholder="***" required>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="booking-summary-section">
+            <div class="summary-card">
+                <h3>Booking Summary</h3>
+            
+                <div class="summary-line">
+                    <span>Guide chosen:</span>
+                    <span>Ahmad</span>
+                </div>
+                <div class="summary-line">
+                    <span>Average Rate:</span>
+                    <span>RM 150.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Platform Fee (10%):</span>
+                    <span>RM 15.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total Amount:</span>
+                    <span>RM 165.00</span>
+                </div>
+                <form action="index1.html" method="GET">
+                    <button type="submit" class="btn-pay">Confirm & Pay Now</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LokalGuide Project Group 11. BIW20303 Web Design</p>
+    </footer>
+
+</body>
+</html>

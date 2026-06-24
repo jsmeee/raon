@@ -1,0 +1,147 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        :root {
+            --primary-blue: #003366; 
+            --accent-orange: #e67e22; 
+            --bg-light: #f8f9fa;
+            --text-dark: #2c3e50;
+            --white: #ffffff;
+        }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            color: var(--accent-orange);
+        }
+
+        .btn-signup {
+            background-color: var(--primary-blue);
+            color: var(--white) !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .btn-signup:hover {
+            background-color: var(--accent-orange);
+        }
+
+
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px){
+        body {
+            font-size: 14px; 
+        }
+        .container, .booking-wrapper, .about-content {
+            padding: 0 15px;
+            margin: 20px auto;
+        }
+        .nav-container {
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px 15px;
+        }
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li, .btn-signup, .card, .guide-card, .pillar-card {
+            width: 100%;
+            max-width: 100%;
+        }
+        nav ul li a {
+            display: block;
+            padding: 8px 0;
+        }
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .page-header, .about-hero {
+            padding: 40px 15px;
+        }
+        .page-header h1, .about-hero h1 {
+            font-size: 1.8rem; 
+        }
+        .search-box {
+            flex-direction: column;
+            border-radius: 10px;
+            background: transparent;
+            box-shadow: none;
+            gap: 10px;
+        }
+        .search-box input, .search-box button {
+            border-radius: 8px;
+            padding: 12px;
+            width: 100%;
+        }
+        .grid-destinations, .guide-grid, .pillars-grid {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .booking-wrapper, .form-row {
+            flex-direction: column;
+            gap: 0;
+        }
+        .booking-form-section, .booking-summary-section {
+            width: 100%;
+        }
+    }

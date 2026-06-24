@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LokalGuide - Discover Authentic Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+    
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), 
+                        url('https://st.depositphotos.com/1927453/1828/i/450/depositphotos_18280473-stock-photo-roszutec-peak-in-sunset-slovakia.jpg') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+    
+        .search-box {
+            background: var(--white);
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .search-box input {
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            border: none;
+            padding: 0 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: var(--primary-blue);
+        }
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-orange);
+            margin: 10px auto 0;
+        }
+
+        .grid-destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: var(--white);
+            flex: 1;
+            min-width: 250px;
+            max-width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body h4 {
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index1.html" class="logo">Lokal<span>Guide</span></a>
+            <ul>
+                <li><a href="index1.html"class="active">Home</a></li>
+                <li><a href="guide.html">Find a Guide</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="dashboard.html">User Dashboard</a></li>
+                <li><a href="login.html" class="btn-login">Log In</a></li>
+                <li><a href="signup.html" class="btn-signup">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+   
+    <header class="hero">
+        <h1>LokalGuide</h1>
+        <p><em>“Connecting with independent local guides who know every corner of the city.”</em></p>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Where are You Going?">
+            <button type="button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="section-title">Popular Destinations</h2>
+        
+        <div class="grid-destinations">
+           
+            <a href="#" class="card">
+            <img src="kl.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Kuala Lumpur</h4>
+                </div>
+            </a>
+
+           
+            <a href="#" class="card">
+            <img src="penang.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Penang Island</h4>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+            <img src="kk.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Sabah</h4>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+            <img src="melaka.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Malacca</h4>
+                </div>
+            </a>
+                        
+            <a href="#" class="card">
+            <img src="langkawi.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Kedah</h4>
+                </div>
+            </a>
+                        
+            <a href="#" class="card">
+            <img src="johor.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Johor</h4>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+            <img src="kelantan.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Kelantan</h4>
+                </div>
+            </a>         
+
+            <a href="#" class="card">
+            <img src="terengganu.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Terengganu</h4>
+                </div>
+            </a>           
+
+            <a href="#" class="card">
+            <img src="perak.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Perak</h4>
+                </div>
+            </a>       
+                
+            <a href="#" class="card">
+            <img src="perlis.png" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Perlis</h4>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+            <img src="pahang.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Pahang</h4>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+            <img src="sarawak.webp" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Sarawak</h4>
+                </div>
+            </a>
+
+            <a href="#" class="card">
+            <img src="selangor.jpg" alt="Kuala Lumpur" width="300" height="200">                
+            <div class="card-body">
+                    <h4>Selangor</h4>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LokalGuide Project Group 11. BIW20303 Web Design</p>
+    </footer>
+
+</body>
+</html>
